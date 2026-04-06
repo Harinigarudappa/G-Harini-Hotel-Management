@@ -1,0 +1,50 @@
+<div class="container">
+
+    <!-- HOTEL HEADER -->
+    <div class="hotel-header">
+  
+      <img src="https://source.unsplash.com/600x350/?hotel" />
+  
+      <div class="hotel-info">
+        <h2>{{hotelName}}</h2>
+        <p>📍 Location • ⭐ 4.8</p>
+        <p class="desc">
+          Experience ultimate luxury with world-class amenities and comfort.
+        </p>
+      </div>
+  
+    </div>
+  
+    <!-- DATE BOX -->
+    <div class="date-box">
+      <h3>Select Your Dates</h3>
+  
+      <div class="date-inputs">
+        <input type="date">
+        <input type="date">
+      </div>
+    </div>
+  
+    <!-- ROOMS -->
+    <h3>Available Rooms</h3>
+  
+    <div class="room-list">
+  
+      <div class="room-card" *ngFor="let room of rooms">
+  
+        <img [src]="room.image" />
+  
+        <div class="room-content">
+          <h4>{{room.type}}</h4>
+          <span class="tag">{{room.tag}}</span>
+  
+          <p>₹ {{room.price}}</p>
+  
+          <button>Book Now</button>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </div>
